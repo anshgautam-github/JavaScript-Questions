@@ -15,3 +15,16 @@ function dropWhile(array,predicate) {
 
     return array.slice(lastIndex);
 }
+
+
+//Usinf WHILE LOOP
+
+function dropWhile(array, predicate) {
+  let index = 0;
+
+  while (index < array.length && predicate(array[index], index, array)) {
+    index++;
+  }
+
+  return array.slice(index);
+}
