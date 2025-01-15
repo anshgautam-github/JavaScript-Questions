@@ -19,3 +19,13 @@ function dropRightWhile(array, predicate) {
   return array.slice(0, lastIndex + 1);
 }
 
+
+//Using WHILE LOOP
+function dropRightWhile(array, predicate) {
+  let lastIndex = array.length - 1;
+
+  while (lastIndex >= 0 && predicate(array[lastIndex], lastIndex, array)) {
+    lastIndex--;
+  }
+  return array.slice(0, lastIndex + 1);
+}
